@@ -80,6 +80,6 @@ class LBKTcell(tf.keras.layers.Layer):
         after_preds = tf.reduce_sum(self.output_layer(new_b_out,training = training),-1) / self.num_units
 
         after_preds = tf.expand_dims(after_preds,-1)
-        improve = (after_preds - preds) / (1 - preds) #对于不认真的情况不应该有很大提升
+        improve = (after_preds - preds) / (1 - preds) #rescale
         result = tf.concat([preds,improve],-1)
         return result,h
