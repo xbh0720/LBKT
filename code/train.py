@@ -118,8 +118,7 @@ class LBKT():
         patience = 5
         count = 0
         min_delta = 0.000001
-        last_auc = 0
-        global best_test_auc
+        best_test_auc = 0
         for idx in range(epoch):
             train_loss, train_auc, train_acc = train_one_epoch(self.recurrent,  optimizer,self.batch_size,*train_data)
             print("[Epoch %d] LogisticLoss: %.6f" % (idx, train_loss))
@@ -137,7 +136,6 @@ class LBKT():
                         break
                 else:
                     count = 0
-                last_auc = valid_auc
 
     def eval(self, test_data) -> ...:
         
