@@ -185,12 +185,12 @@ pad_len = 100
 dim_tp = 128
 num_resps = 2
 num_units = 128
-dropout  = 0.2 #0.2 kt529
+dropout  = 0.2 
 dim_hidden = 50
 EPOCHS = 100
 BUFFER_SIZE = 1000
 BATCH_SIZE = int(args.batch_size)
-lr = float(args.lrate)#0.005 #0.001
+lr = float(args.lrate)
 q_factor = float(args.q_factor)
 
 
@@ -221,7 +221,7 @@ memory_size = len(kc2index)
 
 steps_per_epoch = int((len(train_Topics) + BATCH_SIZE - 1)/ BATCH_SIZE)
 print('steps_per_epoch ',steps_per_epoch)
-best_test_auc = 0
+
 q_matrix = (1 - q_factor) * q_matrix + q_factor * np.ones_like(q_matrix)
 
 model = LBKT(num_topics,dim_tp, num_resps,num_units, dropout,dim_hidden,memory_size,BATCH_SIZE,q_matrix)
