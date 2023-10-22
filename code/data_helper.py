@@ -75,7 +75,7 @@ def form_data(input_data,pad_len,topic2index_path,topic_factor_path,attemtps_fac
             resps_pad = resps[n* pad_len : ] + [0] * padding
             atime_pad = atime[n* pad_len : ] + [0] * padding
             attempts_pad = attempts[n * pad_len : ] + [0] * padding
-            hints_pad = attempts[n * pad_len : ] + [0] * padding
+            hints_pad = hints[n * pad_len : ] + [0] * padding
             time_factor_pad = time_factor[n * pad_len :] + [0]* padding 
             attempts_factor_pad = attempts_factor[n*pad_len : ] + [0] * padding
             hints_factor_pad = hints_factor[n*pad_len : ] + [0] *padding
