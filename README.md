@@ -7,6 +7,7 @@ The LBKT model tracks learners' knowledge states by capturing their multiple lea
 
 The Differentiated Behavior Effect Quantifying module (shown in Figure (b)) and  Fused Behavior Effect Measuring module (shown in Figure (c)) capture the distinctive and fused effect of behaviors on learners’ knowledge acquisition respectively. And a forget gate is designed to combine the forgetting factor with the behavior affected knowledge acquisition to update learners’ knowledge state. 
 
+The pytorch version of LBKT and data processing code of ASSISTMENTS2019 are released in [EduKTM](https://github.com/bigdata-ustc/EduKTM/blob/main/examples/LBKT/data_preprocess.ipynb) repository.
 
 If the reader wants to know the details of LBKT, please refer to the paper: *[Learning Behavior-oriented Knowledge Tracing](https://dl.acm.org/doi/abs/10.1145/3580305.3599407)*.
 ```bibtex
